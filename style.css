@@ -1,0 +1,419 @@
+/* Folder: daily/style.css */
+
+/* --- 1. VARIABLES AND BASE STYLES --- */
+:root {
+    --color-primary: #4E342E; /* Dark Brown/Coffee */
+    --color-secondary: #BCAAA4; /* Light Tan/Beige (Bread) */
+    --color-background: #FFF8E1; /* Off-White/Cream */
+    --color-text-dark: #333333;
+    --color-text-light: #ffffff;
+    --font-serif: 'Lora', serif;
+    --font-sans: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    background-color: var(--color-background);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    color: var(--color-primary);
+    margin-bottom: 0.5em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: color 0.3s, background-color 0.3s;
+}
+
+section {
+    padding: 80px 5%;
+    min-height: 80vh;
+}
+
+/* --- 2. HEADER AND NAVIGATION --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--color-background);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.desktop-nav a {
+    margin-left: 25px;
+    font-size: 1em;
+}
+
+.cta-nav {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-left: 30px;
+}
+
+.cta-nav:hover {
+    background-color: #6d4c41; /* Slightly lighter primary */
+    color: var(--color-text-light);
+}
+
+.nav-icons i {
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.mobile-menu-toggle {
+    display: none; /* Hidden on desktop */
+}
+
+/* --- 3. HERO SECTION / DAILY VERSE --- */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    position: relative;
+    min-height: 90vh;
+}
+
+.hero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.verse-container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 30px;
+}
+
+.verse-container h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.daily-verse-card {
+    background-color: var(--color-text-light);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.icon-large {
+    font-size: 2em;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.verse-text {
+    font-family: var(--font-serif);
+    font-size: 1.5em;
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.verse-reference {
+    font-weight: 600;
+    color: var(--color-secondary);
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-share {
+    background-color: var(--color-secondary);
+    color: var(--color-text-dark);
+}
+
+.btn-share:hover {
+    background-color: #a99893;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+.btn-primary:hover {
+    background-color: #6d4c41;
+}
+
+/* --- 4. FEATURES SECTION --- */
+.features-section {
+    text-align: center;
+}
+
+.features-section h2 {
+    margin-bottom: 50px;
+    font-size: 2.5em;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: var(--color-text-light);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    max-width: 300px;
+    text-align: center;
+}
+
+.feature-card i {
+    font-size: 3em;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+/* --- 5. ABOUT SECTION --- */
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 100px 5%;
+    background-color: var(--color-text-light);
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 2.5em;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+.about-image {
+    flex: 1;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 6. FOOTER --- */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 20px;
+}
+
+footer .logo {
+    color: var(--color-text-light);
+}
+
+.footer-links a {
+    color: var(--color-secondary);
+    margin-left: 20px;
+    font-size: 0.9em;
+}
+
+.footer-links a:hover {
+    color: var(--color-text-light);
+}
+
+.social-media a {
+    color: var(--color-text-light);
+    font-size: 1.2em;
+    margin-left: 15px;
+}
+
+.copyright {
+    font-size: 0.8em;
+    color: #a1928b;
+}
+
+/* --- 7. MOBILE SPECIFIC STYLES & RESPONSIVE --- */
+
+/* Mobile Menu Overlay */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+.mobile-menu a {
+    color: var(--color-text-light);
+    font-size: 1.5em;
+    padding: 15px 0;
+    width: 80%;
+    text-align: center;
+}
+
+.cta-nav-mobile-link {
+    margin-top: 30px;
+    background-color: var(--color-secondary);
+    color: var(--color-text-dark) !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em !important;
+}
+
+/* Fixed Bottom "Buy Now" Button */
+.mobile-buy-now {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #FBC02D; /* Bright Gold Accent */
+    color: var(--color-text-dark);
+    padding: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    z-index: 1001;
+    display: none; /* Hidden on desktop */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Desktop-only elements hiding on mobile */
+@media (max-width: 900px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .mobile-buy-now {
+        display: block;
+    }
+
+    /* Adjust padding for the mobile bottom button */
+    section {
+        padding-bottom: 100px; 
+    }
+
+    .hero-container h1 {
+        font-size: 2.5em;
+    }
+    
+    .daily-verse-card {
+        padding: 30px 20px;
+    }
+
+    .verse-text {
+        font-size: 1.3em;
+    }
+
+    .feature-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-card {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-image {
+        width: 100%;
+        min-height: 250px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links {
+        margin: 20px 0;
+    }
+    
+    .footer-links a {
+        margin: 0 10px;
+        display: inline-block;
+    }
+    
+    .social-media {
+        margin-top: 10px;
+    }
+}

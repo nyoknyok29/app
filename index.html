@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Bread - Your Daily Scripture</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Daily Bread</div>
+        <nav class="desktop-nav">
+            <a href="#verse">Today's Verse</a>
+            <a href="#features">Features</a>
+            <a href="#about">Our Mission</a>
+            <a href="#" class="cta-nav">Download App</a>
+        </nav>
+        <div class="nav-icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-bars mobile-menu-toggle" id="menuToggle"></i>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#verse" onclick="closeMenu()">Today's Verse</a>
+        <a href="#features" onclick="closeMenu()">Features</a>
+        <a href="#about" onclick="closeMenu()">Our Mission</a>
+        <a href="#" class="cta-nav-mobile-link" onclick="closeMenu()">Download App</a>
+    </div>
+
+    <section class="hero-section" id="verse">
+        <div class="verse-container" data-aos="fade-up" data-aos-delay="500">
+            <h1 data-aos="fade-down">The Bread of Life</h1>
+            
+            <div class="daily-verse-card" data-aos="zoom-in" data-aos-duration="1500">
+                <i class="fas fa-bible icon-large"></i>
+                <p class="verse-text" id="dailyVerseText">
+                    "For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future."
+                </p>
+                <p class="verse-reference" id="dailyVerseRef">
+                    – Jeremiah 29:11 (NIV)
+                </p>
+                <button class="btn btn-share" data-aos="fade-up" data-aos-delay="1000">
+                    <i class="fas fa-share-alt"></i> Share This Verse
+                </button>
+            </div>
+            
+        </div>
+        <div class="hero-bg" style="background-image: url('images/serene_sunrise.jpg');" data-aos="fade" data-aos-duration="2000"></div>
+    </section>
+
+    <section class="features-section" id="features">
+        <h2 data-aos="fade-right">Deepen Your Faith Daily</h2>
+        <div class="feature-grid">
+            
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-book-open"></i>
+                <h3>Daily Readings</h3>
+                <p>Curated scriptures and devotionals tailored for reflection and growth.</p>
+            </div>
+            
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-microphone"></i>
+                <h3>Audio Sermons</h3>
+                <p>Listen to inspirational messages from global leaders, anytime, anywhere.</p>
+            </div>
+            
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                <i class="fas fa-star"></i>
+                <h3>Save & Favorite</h3>
+                <p>Bookmark your favorite verses and notes for easy access and revisit them later.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="about-content" data-aos="fade-right">
+            <h2>Our Mission</h2>
+            <p>At **Daily Bread**, our mission is to make the Word of God accessible and engaging for everyone, everywhere. We believe that daily scripture is essential for nourishing the soul and guiding life's journey.</p>
+            <p>Join our global community and start receiving your daily dose of inspiration today.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+        <div class="about-image" style="background-image: url('images/people_reading.jpg');" data-aos="fade-left"></div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">Daily Bread</div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Support</a>
+            </div>
+            <div class="social-media">
+                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Daily Bread. All rights reserved.</p>
+    </footer>
+
+    <a href="#" class="mobile-buy-now">Buy Now</a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
